@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+  width: 80%;
+  margin: auto;
+}
+
+
+/* Header Section  */
+
+
+
+body{
+  background-color: #f4f4f4;
+}
+
+header{
+  background-color: #f4f4f4;
+  padding: 25px;
+}
+
+.headerBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerBox h1 {
+  color: #111517;
+  font-family: "Nunito Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+#darkModeBtn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+/* Input Section  */
+
+
+.searchBox {
+  position: relative;
+  padding: 50px 0px;
+}
+
+.searchBox input {
+  width: 480px;
+  height: 56px;
+  padding: 10px 10px 10px 60px;
+  font-size: 16px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background: #f4f4f4;
+  border: none;
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.1);
+}
+
+.searchBox i {
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #848484;
+  pointer-events: none;
+}
+
+.searchBox input::placeholder {
+  font-size: 16px;
+  color: #848484;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+
+/* Cards Section  */
+
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.cardBox {
+  width: calc(25% - 20px);
+  padding-bottom: 50px;
+  border-radius: 5px;
+  background: #fdf4f4;
+  box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cardBox img {
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.cardBox h2 {
+  font-size: 20px;
+  padding: 20px 25px;
+  color: #111517;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 26px;
+}
+
+.cardBox p {
+  padding: 5px 25px;
+  color: #111517;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+
+
+/* Modal  Section  */
+
+
+
+.card-modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: #f4f4f4;
+}
+
+.card {
+  background-color: #fdf4f4;
+  border-radius: 10px;
+  height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.card h5 {
+  font-size: 24px;
+  margin: 15px 0;
+  padding: 0px 20px ;
+}
+
+.card p {
+  margin: 10px 0;
+  font-size: 16px;
+  padding: 5px 20px;
+}
+
+.backBtn {
+  background-color: #ece8e8;
+  color: #111517;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.backBtn:hover {
+  background-color: #cfcdcd;
+}
+
+
+
+/* Dark Mode  */
+
+
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode header {
+  background-color: #1e1e1e;
+}
+
+.dark-mode .headerBox h1 {
+  color: #ffffff;
+}
+
+.dark-mode .searchBox input {
+  background-color: #333333;
+  color: #ffffff;
+  border: 1px solid #444444;
+}
+
+.dark-mode .searchBox i {
+  color: #ffffff;
+}
+
+.dark-mode .cardBox {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border: 1px solid #333333;
+}
+
+.dark-mode .cardBox h2,
+.dark-mode .cardBox p {
+  color: #ffffff;
+}
+
+.dark-mode #darkModeBtn img {
+  filter: invert(100%);
+}
+
+
+
+/* Modal Dark Mode  */
+
+
+.dark-mode .card-modal {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.dark-mode .card-modal header {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .card-modal .card {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #444444;
+}
+
+.dark-mode .card-modal .card h5,
+.dark-mode .card-modal .card p {
+    color: #ffffff;
+    background-color: #333333;
+}
+
+.dark-mode .backBtn {
+    background-color: #444444;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+
+
+
