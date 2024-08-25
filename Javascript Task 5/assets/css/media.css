@@ -7,11 +7,46 @@
 }
 
 @media (max-width: 768px) {
-  
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    .searchBox{
+        text-align: center;
+    }
+
+    .searchBox input {
+        width: 100%;
+        padding: 10px 40px 10px 70px;
+    }
+
+    .cardsContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cardBox {
+        width: 90%;
+    }
+
+    .cardBox img{
+        height: 300px;
+    }
+
+
+
+    .card-modal .card {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
+
 @media(max-width:576px){
-    .card {
-        width: 100%;
-    }
+
 }
